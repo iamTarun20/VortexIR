@@ -1,0 +1,11 @@
+{
+  "name": "VortexIR C++ + React",
+  "image": "mcr.microsoft.com/devcontainers/cpp:1-ubuntu-24.04",
+  "features": { "ghcr.io/devcontainers/features/node:1": { "version": "22" } },
+  "forwardPorts": [5173],
+  "portsAttributes": {
+    "5173": { "label": "VortexIR", "onAutoForward": "notify" }
+  },
+  "postCreateCommand": "bash scripts/setup-codespace.sh",
+  "customizations": { "vscode": { "extensions": ["ms-vscode.cpptools"] } }
+}

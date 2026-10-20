@@ -1,0 +1,8 @@
+node_modules/
+dist/
+build/
+public/wasm/*
+!public/wasm/.gitkeep
+public/pdfjs/
+.emsdk/
+*.log

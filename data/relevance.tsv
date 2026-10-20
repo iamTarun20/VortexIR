@@ -1,0 +1,17 @@
+# query	subject	relevant resource IDs
+How does deadlock occur?	OS	42
+Find the shortest path in an unweighted graph	DSA	2
+How do I use memoization and tabulation?	DSA	8
+What is a binary indexed tree?	DSA	7
+What is dynamic dispatch?	OOPS	17
+How do I hide class data?	OOPS	19
+When is an object destructor called?	OOPS	15
+How do I create an abstract class?	OOPS	18
+How can I inspect a SQL query plan?	DBMS	28
+How does write ahead logging help recovery?	DBMS	31
+What is transaction isolation?	DBMS	26
+How do primary and foreign keys work?	DBMS	30
+How are virtual pages mapped to physical frames?	OS	36
+How do semaphores coordinate threads?	OS	41
+Compare CPU scheduling policies	OS	34
+How does page replacement work?	OS	37

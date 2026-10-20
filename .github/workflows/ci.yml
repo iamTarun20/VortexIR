@@ -1,0 +1,30 @@
+name: Build and test
+on:
+  push:
+    branches: [main]
+  pull_request:
+  workflow_dispatch:
+permissions:
+  contents: read
+jobs:
+  validate:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+          cache: npm
+      - run: npm ci
+      - run: npm test
+      - run: |
+          git clone --depth 1 https://github.com/emscripten-core/emsdk.git /tmp/emsdk
+          /tmp/emsdk/emsdk install 4.0.15
+          /tmp/emsdk/emsdk activate 4.0.15
+          source /tmp/emsdk/emsdk_env.sh
+          npm run build:wasm
+      - run: npm run check:wasm
+      - run: npm run check:pdf
+      - run: npm run build
+      - run: python3 scripts/evaluate.py
+      - run: npm run benchmark
